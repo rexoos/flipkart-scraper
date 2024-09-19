@@ -21,19 +21,19 @@ class FlipkartScraper:
             return None
 
     def get_product_info(self):
-        title_element = self.soup.find('span', {'class': 'B_NuCI'})
+        title_element = self.soup.find('span', {'class': 'wjcEIp'})
         title = title_element.get_text().strip() if title_element else None
 
-        price_element = self.soup.find('div', {'class': '_30jeq3'})
+        price_element = self.soup.find('div', {'class': 'Nx9bqj'})
         price = price_element.get_text().strip() if price_element else None
 
-        rating_element = self.soup.find('div', {'class': '_3LWZlK'})
+        rating_element = self.soup.find('div', {'class': 'XQDdHH'})
         rating = rating_element.text if rating_element else None
 
-        num_reviews_element = self.soup.find('span', {'class': '_2_R_DZ'})
+        num_reviews_element = self.soup.find('span', {'class': 'Wphh3N'})
         num_reviews = num_reviews_element.text if num_reviews_element else None
 
-        description_element = self.soup.find('div', {'class': '_1mXcCf'})
+        description_element = self.soup.find('div', {'class': 'yiggsN O5Fpg8'})
         description = description_element.get_text().strip() if description_element else None
 
         return {'title': title, 'price': price, 'rating': rating, 'num_reviews': num_reviews, 'description': description}
